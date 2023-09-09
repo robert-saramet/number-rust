@@ -1,0 +1,16 @@
+[package]
+name = "number"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+random_tests = ["dep:rand"]
+large_tests = ["random_tests"]
+prime_tests = []
+all_tests = ["large_tests", "prime_tests"]
+
+[dependencies]
+derive-getters = "0.3.0"
+num = "0.4.1"
+rand = {version = "0.8.5", optional = true}
